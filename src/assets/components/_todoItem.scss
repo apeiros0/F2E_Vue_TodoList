@@ -1,0 +1,116 @@
+.nav-item {
+  position: relative;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  &:hover, &:focus, &:active {
+    .icon-draggable {
+      cursor: move;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+.icon-draggable {
+  font-size: 1.5rem;
+  color: #d8d8d8;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.icon-info {
+  margin-left: 40px;
+  color: #757575;
+  span {
+    user-select: none;
+  }
+}
+.processing-tasks {
+  font-size: 1.5rem;
+  color: $light-gray;
+}
+
+// checkbox
+.todo-checkbox-group {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.todo-checkbox {
+  position: absolute;
+  // 隱藏 checkbox
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+  // 當 checkbox 被 checked 時，
+  // 相鄰的 todo-checkbox-mark 會變換顏色
+  &:checked + &-mark {
+    background-color: #2196f3;
+    &::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &-mark {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #fff;
+    border-radius: 2px;
+    // 圖案位置
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: #ccc;
+    }
+    // checked 後的圖案
+    &::after {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 10px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+.todo-title {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 28px;
+  user-select: none;
+  &.active {
+    color: #9b9b9b;
+    text-decoration: line-through;
+  }
+}
+
+// draggable
+// --------------------
+
+// 拖曳到目標的 CSS 效果
+.sortable-ghost {
+  opacity: 0.5;
+  box-shadow: 0 0 10px 2px lighten($black, 70%);
+}

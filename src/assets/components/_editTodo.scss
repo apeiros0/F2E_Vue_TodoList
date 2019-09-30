@@ -1,0 +1,49 @@
+.edit-todo-card {
+  box-shadow: 0 4px 4px 0 $light-gray;
+  border-radius: 5px;
+}
+
+// form
+.icon-size {
+  font-size: 1.5rem;
+}
+
+.text-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.textarea,
+input[class="form-control"] {
+  border-radius: 2px !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  &::placeholder {
+    color: $light-gray !important;
+  }
+}
+
+// 取消 date 的預設 spin 和 picker
+// .unstyled::-webkit-calendar-picker-indicator
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.textarea-style {
+  line-height: 24px;
+  resize: none;
+}
+
+// btn
+.btn-unstyle {
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.btn-icon {
+  font-size: 1.5rem;
+}
