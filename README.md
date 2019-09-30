@@ -1,4 +1,4 @@
-# vue-todolist-f2e
+# f2e-vue-todolist
 
 ## Project setup
 ```
