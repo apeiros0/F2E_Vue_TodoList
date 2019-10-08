@@ -1,5 +1,5 @@
 {
-  "root": "dist/F2E_Vue_TodoList/",
+  "root": "dist",
   "clean_urls": true,
   "routes": {
     "/**": "index.html"
