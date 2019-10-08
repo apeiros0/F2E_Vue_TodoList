@@ -47,15 +47,15 @@
       "endDate": "2019-09-17",
       "timeStamp": 1569839628,
       "stared": true,
-      "completed": "progress",
+      "completed": "completed",
       "id": 6
     },
     {
       "message": "HH",
       "comments": "HH",
       "timeStamp": 1569839813,
-      "stared": true,
-      "completed": "progress",
+      "stared": false,
+      "completed": "completed",
       "id": 7,
       "startDate": "2019-09-01",
       "endDate": "2019-09-19"
@@ -101,6 +101,13 @@
       "stared": false,
       "completed": "completed",
       "id": 12
+    },
+    {
+      "message": "AAA",
+      "timeStamp": 1570529492,
+      "stared": false,
+      "completed": "completed",
+      "id": 13
     }
   ],
   "sort": {
