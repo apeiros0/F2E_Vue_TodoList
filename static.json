@@ -1,7 +1,7 @@
 {
-    "root": "dist",
-    "clean_urls": true,
-    "routes": {
-      "/**": "index.html"
-    }
+  "root": "dist/F2E_Vue_TodoList/",
+  "clean_urls": true,
+  "routes": {
+    "/**": "index.html"
   }
+}
