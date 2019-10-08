@@ -1,5 +1,6 @@
 .DS_Store
 node_modules
+heroku-todo-lists
 
 # local env files
 .env.local

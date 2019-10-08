@@ -69,13 +69,13 @@ export default {
     // 取得 todos
     getTodos() {
       const self = this;
-      const api = 'http://localhost:3000/todos';
+      const api = 'https://intense-citadel-09458.herokuapp.com/todos';
       let todoArray = [];
       let sortArray = [];
       self.$http.get(api).then((response) => {
         // 取得 todo 資料
         todoArray = [...response.data];
-        return self.$http.get('http://localhost:3000/sort');
+        return self.$http.get('https://intense-citadel-09458.herokuapp.com/sort');
       }).then((response) => {
         // 取得 sort 資料
         sortArray = [...response.data.sort];
@@ -118,7 +118,7 @@ export default {
     },
     dragItem() {
       const self = this;
-      const api = 'http://localhost:3000/sort';
+      const api = 'https://intense-citadel-09458.herokuapp.com/sort';
       // 取得排序順序
       const sort = self.todos.map(item => item.id);
       // todos.json 的 sort 是使用 object 的方式呈現 (每次都會只有 sort 一筆的值)

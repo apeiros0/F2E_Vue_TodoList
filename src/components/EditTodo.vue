@@ -83,7 +83,7 @@ export default {
   methods: {
     updateTodo() {
       const self = this;
-      let api = 'http://localhost:3000/todos';
+      let api = 'https://intense-citadel-09458.herokuapp.com/todos';
       let method = 'post';
       const timeStamp = Math.floor(Date.now() / 1000);
       let todo = {
@@ -95,7 +95,7 @@ export default {
       // 透過 isOld 判斷舊資料
       if (self.isOld) {
         // 使用 put 更新舊資料
-        api = `http://localhost:3000/todos/${self.cacheTodo.id}`;
+        api = `https://intense-citadel-09458.herokuapp.com/todos/${self.cacheTodo.id}`;
         method = 'put';
         todo = { ...self.cacheTodo };
       }

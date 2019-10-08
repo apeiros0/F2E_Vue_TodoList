@@ -51,7 +51,7 @@ export default {
     updateStar() {
       const self = this;
       // put 是先取得 id 再做 put 行為
-      const api = `http://localhost:3000/todos/${self.todo.id}`;
+      const api = `https://intense-citadel-09458.herokuapp.com/todos/${self.todo.id}`;
       const cacheTodo = { ...self.todo };
       cacheTodo.stared = !cacheTodo.stared;
       // put 是用覆蓋的方式將資料更新
@@ -67,7 +67,7 @@ export default {
     updateTaskStatus() {
       const self = this;
       // put 是先取得 id 再做 put 行為
-      const api = `http://localhost:3000/todos/${self.todo.id}`;
+      const api = `https://intense-citadel-09458.herokuapp.com/todos/${self.todo.id}`;
       const cacheTodo = { ...self.todo };
       if (this.isChecked) {
         self.completedStatus = 'completed';
