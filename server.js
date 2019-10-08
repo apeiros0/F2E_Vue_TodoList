@@ -1,8 +1,10 @@
-const express = require('express');
-const port = process.env.PORT || 8080;
-const app = express();
+const jsonServer = require('json-server');
+const server = jsonServer.create();
+const router = jsonServer.router('todos.json');
+const middlewares = jsonServer.defaults();
+const port = process.env.PORT || 4000;
 
-app.use(express.static(__dirname + '/dist/'));
-app.get(/.*/, (req, res) => res.sendfile(__dirname + '/dist/index.html'));
+server.use(middlewares);
+server.use(router);
 
-console.log('Server started...');
+server.listen(port);
